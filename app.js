@@ -1,2 +1,3 @@
 const myHeading = document.querySelector('#myHeading');
-myHeading.addEventListener('click', () => myHeading.style.color = 'red'); 
+const myButton = document.querySelector('#myButton');
+myButton.addEventListener('click', () => myHeading.style.color = 'red'); 
