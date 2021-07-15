@@ -1,1 +1,2 @@
-const myHeading = document.querySelector('#myHeading'); 
+const myHeading = document.querySelector('#myHeading');
+myHeading.addEventListener('click', () => myHeading.style.color = 'red'); 
