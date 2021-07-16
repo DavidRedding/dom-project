@@ -3,6 +3,8 @@ let listDiv = document.querySelector(".listDiv");
 let listDescription = document.querySelector("p.description");
 let descriptionButton = document.querySelector("button.description");
 let desctiptionInput = document.querySelector("input.description");
+let addItemInput = document.querySelector("input.addItem");
+let addItemButton = document.querySelector("button.addItem");
 
 hideButton.addEventListener("click", () => {
   if (listDiv.style.display != "none") {
