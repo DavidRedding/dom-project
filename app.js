@@ -35,4 +35,15 @@ removeItem.addEventListener('click', () => {
     ul.removeChild(li); 
 })
 
+const listItems = document.querySelectorAll('li');
 
+for (let i = 0; i < listItems.length; i++) {
+    listItems[i].addEventListener('mouseover', () => {
+        listItems[i].textContent = listItems[i].textContent.toUpperCase();
+    })
+    listItems[i].addEventListener('mouseout', () => {
+        listItems[i].textContent = listItems[i].textContent.toLowerCase();
+    })
+    }
+
+//ul.addEventListener('mouseout', () => )
