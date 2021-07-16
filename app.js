@@ -35,15 +35,14 @@ removeItem.addEventListener('click', () => {
     ul.removeChild(li); 
 })
 
-const listItems = document.querySelectorAll('li');
-
-for (let i = 0; i < listItems.length; i++) {
-    listItems[i].addEventListener('mouseover', () => {
-        listItems[i].textContent = listItems[i].textContent.toUpperCase();
-    })
-    listItems[i].addEventListener('mouseout', () => {
-        listItems[i].textContent = listItems[i].textContent.toLowerCase();
-    })
+listDiv.addEventListener('mouseover', (e) => {
+    if (e.target.tagName == ('LI')){
+        e.target.textContent = e.target.textContent.toUpperCase(); 
     }
+})
 
-//ul.addEventListener('mouseout', () => )
+listDiv.addEventListener('mouseout', (e) => {
+    if (e.target.tagName == ('LI')){
+        e.target.textContent = e.target.textContent.toLowerCase(); 
+    }
+})
