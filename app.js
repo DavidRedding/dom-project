@@ -6,6 +6,7 @@ let desctiptionInput = document.querySelector("input.description");
 let ul = document.querySelector('ul');
 let addItemInput = document.querySelector("input.addItem");
 let addItemButton = document.querySelector("button.addItem");
+let removeItem = document.querySelector("button.removeItem");
 
 hideButton.addEventListener("click", () => {
   if (listDiv.style.display != "none") {
@@ -26,4 +27,9 @@ addItemButton.addEventListener('click', () => {
     li.textContent = addItemInput.value;
     ul.appendChild(li);
     addItemInput.value = '';
+})
+
+removeItem.addEventListener('click', () => {
+    let li = document.querySelector('li:last-child');
+    ul.removeChild(li); 
 })
