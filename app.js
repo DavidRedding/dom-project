@@ -3,6 +3,7 @@ let listDiv = document.querySelector(".listDiv");
 let listDescription = document.querySelector("p.description");
 let descriptionButton = document.querySelector("button.description");
 let desctiptionInput = document.querySelector("input.description");
+let ul = document.querySelector('ul');
 let addItemInput = document.querySelector("input.addItem");
 let addItemButton = document.querySelector("button.addItem");
 
@@ -19,3 +20,9 @@ hideButton.addEventListener("click", () => {
 descriptionButton.addEventListener("click", () => {
   listDescription.textContent = `Things that are ${desctiptionInput.value}:`;
 });
+
+addItemButton.addEventListener('click', () => {
+    let li = document.createElement('LI');
+    li.textContent = addItemInput.value;
+    ul.appendChild(li);
+})
