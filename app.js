@@ -25,4 +25,5 @@ addItemButton.addEventListener('click', () => {
     let li = document.createElement('LI');
     li.textContent = addItemInput.value;
     ul.appendChild(li);
+    addItemInput.value = '';
 })
