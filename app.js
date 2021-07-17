@@ -3,7 +3,7 @@ let listDiv = document.querySelector(".listDiv");
 let listDescription = document.querySelector("p.description");
 let descriptionButton = document.querySelector("button.description");
 let descriptionInput = document.querySelector("input.description");
-let ul = document.querySelector('ul');
+//let ul = document.querySelector('li').parentNode; || alternate transversal
 let addItemInput = document.querySelector("input.addItem");
 let addItemButton = document.querySelector("button.addItem");
 let removeItem = document.querySelector("button.removeItem");
@@ -35,14 +35,12 @@ removeItem.addEventListener('click', () => {
     ul.removeChild(li); 
 })
 
-listDiv.addEventListener('mouseover', (e) => {
-    if (e.target.tagName == ('LI')){
-        e.target.textContent = e.target.textContent.toUpperCase(); 
-    }
-})
 
-listDiv.addEventListener('mouseout', (e) => {
-    if (e.target.tagName == ('LI')){
-        e.target.textContent = e.target.textContent.toLowerCase(); 
+let ul = listDiv.children[3]
+
+ul.addEventListener('click', (e) => {
+    if (e.target.tagName == ('BUTTON')){
+        let li = e.target.parentNode;
+        ul.removeChild(li); 
     }
 })
