@@ -39,10 +39,17 @@ ul.addEventListener('click', (e) => {
             let li = e.target.parentNode;
             let prevLi = li.previousElementSibling;
             let ul = li.parentNode;
-            if (prevLi) {
-              ul.insertBefore(li, prevLi); 
+            if (prevLi) { //checks null (if there is a prevLi)
+              ul.insertBefore(li, prevLi); // puts li on top of prevLi
+            } 
+        }
+        if (e.target.id == 'down') {
+            let li = e.target.parentNode;
+            let ul = li.parentNode;
+            let nextLi = li.nextElementSibling;
+            if(nextEl){ // checks null
+                ul.insertBefore(nextLi,li); // sits nextLi on top of li
             }
-              
         }
     }
 })
