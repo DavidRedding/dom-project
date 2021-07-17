@@ -6,7 +6,6 @@ let descriptionInput = document.querySelector("input.description");
 //let ul = document.querySelector('li').parentNode; || alternate transversal
 let addItemInput = document.querySelector("input.addItem");
 let addItemButton = document.querySelector("button.addItem");
-let removeItem = document.querySelector("button.removeItem");
 
 hideButton.addEventListener("click", () => {
   if (listDiv.style.display != "none") {
@@ -30,14 +29,7 @@ addItemButton.addEventListener('click', () => {
     addItemInput.value = '';
 })
 
-removeItem.addEventListener('click', () => {
-    let li = document.querySelector('li:last-child');
-    ul.removeChild(li); 
-})
-
-
-let ul = listDiv.children[3]
-
+let ul = listDiv.children[3];
 ul.addEventListener('click', (e) => {
     if (e.target.tagName == ('BUTTON')){
         let li = e.target.parentNode;
