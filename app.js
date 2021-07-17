@@ -3,7 +3,6 @@ let listDiv = document.querySelector(".listDiv");
 let listDescription = document.querySelector("p.description");
 let descriptionButton = document.querySelector("button.description");
 let descriptionInput = document.querySelector("input.description");
-//let ul = document.querySelector('li').parentNode; || alternate transversal
 let addItemInput = document.querySelector("input.addItem");
 let addItemButton = document.querySelector("button.addItem");
 
@@ -32,7 +31,18 @@ addItemButton.addEventListener('click', () => {
 let ul = listDiv.children[3];
 ul.addEventListener('click', (e) => {
     if (e.target.tagName == ('BUTTON')){
-        let li = e.target.parentNode;
-        ul.removeChild(li); 
+        if (e.target.id == 'remove') {
+            let li = e.target.parentNode;
+            ul.removeChild(li);   
+        }
+        if (e.target.id == 'up') {
+            let li = e.target.parentNode;
+            let prevLi = li.previousElementSibling;
+            let ul = li.parentNode;
+            if (prevLi) {
+              ul.insertBefore(li, prevLi); 
+            }
+              
+        }
     }
 })
