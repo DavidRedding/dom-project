@@ -6,24 +6,19 @@ let descriptionInput = document.querySelector("input.description");
 let addItemInput = document.querySelector("input.addItem");
 let addItemButton = document.querySelector("button.addItem");
 let ul = listDiv.children[3];
+let upButton = `<button id="up">Up</button>`;
+let downButton =`<button id='down'>Down</button>`;
+let removeButton =`<button id='remove'>Remove</button>`;
 
-let addButtons = ul => {        //ul = ul.children
+
+let addButtons = ul => {        
     for (let i = 0; i < ul.children.length; i++) {
-      ul.children[i].innerHTML += `
-      <button id="up">Up</button>
-      <button id='remove'>Remove</button>
-      <button id='down'>Down</button>
-      `;
+      ul.children[i].innerHTML += `${upButton}${downButton}${removeButton}`;
 }}
-
 addButtons(ul);
 
 let addSingleButton = (li) => {
-    li.innerHTML += `
-    <button id="up">Up</button>
-    <button id='remove'>Remove</button>
-    <button id='down'>Down</button>
-    `;
+    li.innerHTML += `${upButton}${downButton}${removeButton}`;
 }
 
 hideButton.addEventListener("click", () => {
